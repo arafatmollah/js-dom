@@ -1,15 +1,9 @@
-// function addList() {
-//     const listItem = document.getElementsByClassName('list');
-//     listItem.innertext = 'ami add korsi';
-// }
-
-function checkButton() {
-    const button = document.getElementById('btn');
-    const sec = document.getElementById('section');
-    sec.style.fontSize = '25px';
-    document.body.style.backgroundColor = 'red';
-    document.body.style.color = 'white';
-    const listItem = document.getElementsByClassName('list');
-    listItem.innerText = 'ami add korsi';
-}
-
+//post added
+document.getElementById('post').addEventListener('click', function () {
+    const commentBox = document.getElementById('comment-area');
+    const comments = document.createElement('p');
+    comments.innerText = commentBox.value;
+    const comment = document.getElementById('comment');
+    comment.appendChild(comments);
+    commentBox.value = '';
+})
